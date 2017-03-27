@@ -1,10 +1,9 @@
-# 모두의 바이오 : 
+# 모두의 바이오 : 모두와 함께 하는 바이오인포메틱스
 
 <img src="https://github.com/biospin/all_bio/blob/master/main01.jpg"  width="600"  height="500"/>
 
-
 ## 스터디 정보
-
+저희 모임은 강의식이 아닌 자신이 스스로 공부한 내용을 여러 사람과 공유하는 스터디 방식이며, 스스로 공부하고자 하는 열정을 꼭 준비물로 가지고 와 주시고, 열심히 발표를 해주시면 더욱 감사합니다.
 
 ## 후원사
 KossLab : http://devlab.oss.kr/
@@ -29,6 +28,12 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 1. 장소: 토즈 신촌  아트리오점 ( http://www.toz.co.kr/branch/main/index.htm?id=6 )
 2. 매주 화요일, 저녁 7시 30분~10시
 3. 시작: 2017년04월 04일
+
+## 이전 스터디 자료 
+- 알바이오플러스 : https://github.com/biospin/R_Bio_Plus 
+- 알바이오 : https://github.com/biospin/R_Bio
+- 빅바이오 : https://github.com/biospin/BigBio 
+- 딥바이오  : https://github.com/biospin/DeepBio
 
 ## Schedule
 
@@ -101,6 +106,6 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 8장 딥러닝
 
 
-
+* "밑바닥부터 시작하는 딥러닝"책  9장이후는 다음 스터디에서 연결해서 진행하겠습니다.
 
 

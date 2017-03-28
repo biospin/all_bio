@@ -41,7 +41,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
 |  1 |2017. 4. 4|(바이오인포)  R유전체분석 - Scalable genomic analysis
-|    |          |(통계와데이터마이닝)  보건의학통계 - 1장 ~ 2장 두 군의 크기 비교
+|    |          |(통계와데이터마이닝)  보건의학통계 - 1장 ~ 2장 두 군의 크기 비교 (채승완)
 |    |          |(딥러닝)  모두의 딥러닝 - ML 01 ~  ML 02
 |  2 |2017. 4.11|(바이오인포)  R유전체분석 - Multi-omic data integration
 |    |          |(통계와데이터마이닝)  머신러닝 - 1장 ~ 2장 Decision Tree

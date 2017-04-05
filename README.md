@@ -37,9 +37,9 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 
 ## 차후 스터디에 대한 고민
 - 가칭 :  elastic  bio 또는  resilient bio
-- 지금까지 스터디를 통해서 바이오 빅데이터를 처리/분석을 하기 위해서 빅데이터 시스템(하둡),슈퍼컴 과 같은 하드웨어 장비를 필수가 아닌 것으로 판단되고
+- 지금까지 스터디를 통해서 바이오 빅데이터를 처리/분석을 하기 위해서 빅데이터 시스템(하둡),슈퍼컴 과 같은 하드웨어 장비가 필수가 아닌 것으로 판단되고
 - 여기 가지 상황에 따라 대응할 수 있는 유연한 방식이 빅데이터 시대에 더욱 필요한 것으로 생각됨.
-- 유연한 대응에 필요한 서비스와 기술들을 활용할 수 있는 능력 배양.  
+- 유연한 대응에 필요한 서비스와 기술들을 활용할 수 있는 능력 배양.
 - 주 내용 : 클라우드 서비스(아마존웹서비스, MS 애저, 구글 클라우드) + 도커(www.docker.com) + GitHub 를 활용한 바이오인포   
 
 
@@ -48,9 +48,9 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 ### Part 1.
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
-|  1 |2017. 4. 4|(바이오인포) R 유전체분석 :  525.6x: Visualization of genome scale data (Week 1)
-|    |          |(통계와데이터마이닝)  보건의학통계 - 1장 ~ 2장 두 군의 크기 비교 (채승완)
-|    |          |(딥러닝)  모두의 딥러닝 - ML 01 ~  ML 02
+|  1 |2017. 4. 4|(바이오인포) R 유전체분석 :  525.6x: Visualization of genome scale data (Week 1)(김가경)
+|    |          |(통계와데이터마이닝)  [보건의학통계 - 1장 ~ 2장 두 군의 크기 비교](https://github.com/biospin/all_bio/blob/master/part01/week1_160404/01_Medical%20statistics_01_v01.pdf) (채승완)
+|    |          |(딥러닝)  [모두의 딥러닝 - ML 01 ~  ML 02](https://github.com/biospin/all_bio/blob/master/part01/week1_160404/%EB%AA%A8%EB%91%90%EC%9D%98-%EB%94%A5%EB%9F%AC%EB%8B%9D-1_Tensorflow-%EC%84%A4%EC%B9%98%ED%8F%AC%ED%95%A8.pdf)(김은영)
 |  2 |2017. 4.11|(바이오인포)  R유전체분석 - Scalable genomic analysis
 |    |          |(통계와데이터마이닝)  머신러닝 - 1장 ~ 2장 Decision Tree
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 1장 헬로 파이썬

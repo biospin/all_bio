@@ -25,7 +25,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
      - 2)  밑바닥부터 시작하는 딥러닝 :  http://book.daum.net/detail/book.do?bookid=BOK00031872854YE
      
 ## 장소
-1. 장소: 토즈 신촌  아트레온점 ( http://www.toz.co.kr/branch/main/index.htm?id=6 )
+1. 장소: 토즈 신촌본점 ( http://www.toz.co.kr/branch/main/index.htm?id=5 )
 2. 매주 화요일, 저녁 7시 30분~10시
 3. 시작: 2017년04월 04일
 

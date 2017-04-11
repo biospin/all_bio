@@ -54,7 +54,8 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |    |          |(통계와데이터마이닝)  [보건의학통계 - 1장 ~ 2장 두 군의 크기 비교](https://github.com/biospin/all_bio/blob/master/part01/week1_160404/01_Medical%20statistics_01_v01.pdf) (채승완)
 |    |          |(딥러닝)  [모두의 딥러닝 - ML 01 ~  ML 02](https://github.com/biospin/all_bio/blob/master/part01/week1_160404/%EB%AA%A8%EB%91%90%EC%9D%98-%EB%94%A5%EB%9F%AC%EB%8B%9D-1_Tensorflow-%EC%84%A4%EC%B9%98%ED%8F%AC%ED%95%A8.pdf)(김은영)
 |  2 |2017. 4.11|(바이오인포)  R유전체분석 - Scalable genomic analysis
-|    |          |(통계와데이터마이닝)  머신러닝 - 1장 ~ 2장 Decision Tree
+|    |          |(통계와데이터마이닝)  [머신러닝 - 1장 거리의개념과MDS](https://github.com/biospin/all_bio/blob/master/part01/week2_160411/%EC%96%B4%EC%84%9C%EC%99%80%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_1%EC%9E%A5_%EC%9E%A5%ED%98%95%EC%84%9D.pdf)(장형석)
+|    |          |(통계와데이터마이닝)  [머신러닝 - 2장 Decision Tree](https://github.com/biospin/all_bio/blob/master/part01/week2_160411/%EC%96%B4%EC%84%9C%EC%99%80%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_2%EC%9E%A5_%EC%9E%A5%ED%98%95%EC%84%9D.pdf)(장형석)
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 1장 헬로 파이썬
 |  3 |2017. 4.18|(바이오인포)  R유전체분석 - Multi-omic data integration
 |    |          |(통계와데이터마이닝) 보건의학통계 - 3장 ~ 4장 세 군 이상의 크기 비교 

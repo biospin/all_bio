@@ -58,6 +58,9 @@ all.equal(serial.output, par.output)
 serial.output
 par.output
 
+# 너무 사용하기 어렵죠.
+# 누구가가 쉽게 사용할 수 있도록 만들어놓은 것이 있습니다.
+# mclapply.hack.R 코드를 리뷰해보죠.
 source('mclapply.hack.R')
 system.time( mclapply(1:4, function(xx){ Sys.sleep(10) }) )
 

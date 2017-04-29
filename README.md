@@ -60,7 +60,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |  3 |2017. 4.18|(바이오인포)  R유전체분석 - Multi-omic data integration
 |    |          |(통계와데이터마이닝) 보건의학통계 - 3장 ~ 4장 세 군 이상의 크기 비교 
 |    |          |(딥러닝)  모두의 딥러닝 - ML 03 ~  ML 04
-|  4 |2017. 4.25|(바이오인포)  [R유전체분석 - Fostering reproducible genome-scale analysis](https://github.com/biospin/all_bio/blob/master/part01/week4_160425/genomicsclass/Reproducible%20research%20and%20R%20authoring%20with%20markdown%20and%20knitr.pdf)(김가경)
+|  4 |2017. 4.25|(바이오인포)  [R유전체분석 - Fostering reproducible genome-scale analysis](https://github.com/biospin/all_bio/blob/master/part01/week4_160425/README.md)(김가경)
 |    |          |(통계와데이터마이닝)  [머신러닝 - 3장 ~ 4장 : knearest neighbors](https://github.com/biospin/all_bio/blob/master/part01/week4_160425/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%9D%80%20%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80_3%2C4%EA%B0%95.pdf)(장준규)
 |    |          |(딥러닝)  [밑바닥부터 시작하는 딥러닝 - 2장 퍼셉트론](https://github.com/biospin/all_bio/blob/master/part01/week4_160425/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0_%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94_%EB%94%A5%EB%9F%AC%EB%8B%9D_Chp2_Perceptron.pdf)(손준영)
 

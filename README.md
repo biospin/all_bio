@@ -69,7 +69,8 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
 |  1 |2017. 5. 2|(바이오인포)  고급바이오정보학 - 2강 Clustering in Health Big Data 
-|    |          |(통계와데이터마이닝)  보건의학통계 - 5장 ~ 6장 연속형 변수 사이의 선형관계 추정 
+|    |          |(통계와데이터마이닝) [보건의학통계 - 5장 ~ 6장 연속형 변수 사이의 선형관계 추정](https://github.com/biospin/all_bio/blob/master/part02/week1_170502/%5B20170502%EB%B0%95%EC%A7%80%ED%98%9C%5D%EC%97%B0%EC%86%8D%ED%98%95%EB%B3%80%EC%88%98%20%EC%82%AC%EC%9D%B4%EC%9D%98%20%EC%84%A0%ED%98%95%EA%B4%80%EA%B3%84%20%EC%B6%94%EC%A0%95.pdf) (박지혜)
+|    |          |(통계와데이터마이닝) [보건의학통계 - 5장 ~ 6장 연속형 변수 사이의 선형관계 추정 실습코드](https://github.com/biospin/all_bio/blob/master/part02/week1_170502/6%EB%8B%A8%EC%9B%90%20%EC%97%B0%EC%86%8D%ED%98%95%20%EB%B3%80%EC%88%98%20%EC%82%AC%EC%9D%B4%EC%9D%98%20%EC%84%A0%ED%98%95%EA%B4%80%EA%B3%84%20%EC%B6%94%EC%A0%95.R)
 |    |          |(딥러닝)  모두의 딥러닝  - ML 05 ~  ML 06
 |  2 |2017. 5.16|(바이오인포) 고급바이오정보학 - 3강. Classification in High Dimensional Data 
 |    |          |(통계와데이터마이닝)  머신러닝 - 5장 ~ 6장 :  Neural Networ

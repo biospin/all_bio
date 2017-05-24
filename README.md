@@ -75,7 +75,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |  2 |2017. 5.16|(바이오인포) 고급바이오정보학 - 3강. Classification in High Dimensional Data(김가경) , [SVM Tutorial](https://github.com/biospin/all_bio/blob/master/part02/week2_170516/svm_tutorial.pdf) 
 |    |          |(통계와데이터마이닝) [ 머신러닝 - 5장 ~ 6장 :  Neural Network](https://github.com/biospin/all_bio/blob/master/part02/week2_170516/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D.pdf)(명충민)
 |    |          |(딥러닝)  [밑바닥부터 시작하는 딥러닝 - 3장 신경망](https://github.com/biospin/all_bio/blob/master/part02/week2_170516/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%EB%94%A5%EB%9F%AC%EB%8B%9D_0509_%EB%B0%9C%ED%91%9C.pdf)(임동조)
-|  3 |2017. 5.23|(바이오인포)  고급바이오정보학 - 4강. On the Association Analysis of CNV data 
+|  3 |2017. 5.23|(바이오인포)  고급바이오정보학 - 4강. On the Association Analysis of CNV data(손준영) 
 |    |          |(통계와데이터마이닝) [보건의학통계 - 7장 생존율의 추정 및 군의 생존율 비교](https://github.com/biospin/all_bio/blob/master/part02/week3_170523/%EC%83%9D%EC%A1%B4%EB%B6%84%EC%84%9D.pdf)(라가영)
 |    |          |              [보건의학통계 - 7장 생존율의 추정 및 군의 생존율 비교 실습](https://github.com/biospin/all_bio/blob/master/part02/week3_170523/Kaplan-Meier.pdf)   
 |    |          |(딥러닝)  [모두의 딥러닝  - ML 07 ~  ML 08](https://github.com/biospin/all_bio/tree/master/part02/week3_170523/all_deep)(김은영)
@@ -87,7 +87,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 ### Part 3.
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
-|  1 |2017. 6.13|(바이오인포)  고급바이오정보학 - 6강. Network Analysis: Network Based Analysis of DNA Data 
+|  1 |2017. 6.13|(바이오인포)  고급바이오정보학 - 6강. Network Analysis: Network Based Analysis of DNA Data (김가경)
 |    |          |(통계와데이터마이닝)  보건의학통계 - 08장 이 여덟 가지만 더 알고 중급 통계
 |    |          |(딥러닝)  모두의 딥러닝 - ML 09 ~  ML 10
 |  2 |2017. 6.20|(바이오인포) 고급바이오정보학 - 8강. Gene Discover I: Multiple Testing with FWER Control 

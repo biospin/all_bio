@@ -43,6 +43,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 - 주 내용
     - 클라우드 서비스(아마존웹서비스, MS 애저, 구글 클라우드) + 도커(www.docker.com) + GitHub 를 활용한 바이오인포
     - 베이지안 통계 + 강화학습
+    - PR12 딥러닝 논문읽기 모임  : https://www.youtube.com/playlist?list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS
 
 
 ## Schedule
@@ -80,7 +81,8 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |    |          |              [보건의학통계 - 7장 생존율의 추정 및 군의 생존율 비교 실습](https://github.com/biospin/all_bio/blob/master/part02/week3_170523/Kaplan-Meier.pdf)   
 |    |          |(딥러닝)  [모두의 딥러닝  - ML 07 ~  ML 08](https://github.com/biospin/all_bio/tree/master/part02/week3_170523/all_deep)(김은영)
 |  4 |2017. 5.30|(바이오인포)  [고급바이오정보학 - 5강. Genetic Population Analysis](https://github.com/biospin/all_bio/blob/master/part02/week4_170530/%EA%B3%A0%EA%B8%89%EB%B0%94%EC%9D%B4%EC%98%A4%EC%A0%95%EB%B3%B4%ED%95%99_5%EA%B0%95_GeneticPopulationAnalysis.pdf)(지용기) 
-|    |          |(통계와데이터마이닝)  머신러닝 -  7장 ~ 8장 : naive Bayes
+|    |          |(통계와데이터마이닝)  [머신러닝 - 7장 : Time Series Analysis](https://github.com/biospin/all_bio/blob/master/part02/week4_170530/%EC%96%B4%EC%84%9C%EC%99%80%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_7%EC%9E%A5_%EC%8B%9C%EA%B3%84%EC%97%B4_%EC%9E%A5%ED%98%95%EC%84%9D.pdf)(장형석)
+|    |          |(통계와데이터마이닝)  [머신러닝 - 8장 : naive Bayes](https://github.com/biospin/all_bio/blob/master/part02/week4_170530/%EC%96%B4%EC%84%9C%EC%99%80%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_8%EC%9E%A5_%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%9E%A5%ED%98%95%EC%84%9D.pdf)(장형석)
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 4장 신경망 학습
 
 

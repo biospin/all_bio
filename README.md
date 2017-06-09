@@ -42,6 +42,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 - 유연한 대응에 필요한 서비스와 기술들을 활용할 수 있는 능력 배양이 필요.
 - 주 내용
     - 클라우드 서비스(아마존웹서비스, MS 애저, 구글 클라우드) + 도커(www.docker.com) + GitHub 를 활용한 바이오인포
+        - bio docker : https://github.com/BioContainers/containers
     - 베이지안 통계 + 강화학습
     - PR12 딥러닝 논문읽기 모임  : https://www.youtube.com/playlist?list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS
 

@@ -91,9 +91,9 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
 |  1 |2017. 6.13|(바이오인포)  고급바이오정보학 - 6강. Network Analysis: Network Based Analysis of DNA Data (김가경)
-|    |          |(통계와데이터마이닝)  보건의학통계 - 08장 이 여덟 가지만 더 알고 중급 통계
-|    |          |(딥러닝)  모두의 딥러닝 - ML 09 ~  ML 10
-|  2 |2017. 6.20|(바이오인포) 고급바이오정보학 - 8강. Gene Discover I: Multiple Testing with FWER Control 
+|    |          |(통계와데이터마이닝)  [보건의학통계 - 08장 이 여덟 가지만 더 알고 중급 통계](https://github.com/biospin/all_bio/blob/master/part03/week1_170613/08%20%EC%9D%B4%20%EC%97%AC%EB%8D%9F%20%EA%B0%80%EC%A7%80%EB%A7%8C%20%EB%8D%94%20%EC%95%8C%EA%B3%A0%20%EC%A4%91%EA%B8%89%20%ED%86%B5%EA%B3%84%EC%97%90%20%EB%93%A4%EC%96%B4%EA%B0%80%EC%9E%90.pdf)(라가영)
+|    |          |(딥러닝)  [모두의 딥러닝 - ML 09 ~  ML 10](https://github.com/biospin/all_bio/blob/master/part03/week1_170613/%EB%AA%A8%EB%91%90%EC%9D%98%20%EB%94%A5%EB%9F%AC%EB%8B%9D%239-10.pdf)(김은영)
+|  2 |2017. 6.20|(바이오인포) [고급바이오정보학 - 8강. Gene Discover I: Multiple Testing with FWER Control](https://github.com/biospin/all_bio/blob/master/part03/week1_170613/%EA%B3%A0%EA%B8%89%EB%B0%94%EC%9D%B4%EC%98%A4%EC%A0%95%EB%B3%B4%ED%95%99_8%EA%B0%95_FWER.pdf)(지용기) 
 |    |          |(통계와데이터마이닝)  머신러닝 - 9장  ~ 10장 : Text Mining
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 5장 오차역전파법
 |  3 |2017. 6.27|(바이오인포)  고급바이오정보학 - 9강. Gene Discover II: Multiple Testing with FDR Control 

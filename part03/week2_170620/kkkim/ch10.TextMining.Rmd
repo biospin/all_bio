@@ -1,0 +1,284 @@
+---
+title: "Chapter 10. Text Mining"
+output:
+  word_document: default
+  html_notebook: default
+  html_document: default
+---
+
+
+### 1. 소개
+7장의 스팸메일 문제를 apriori 기법을 텍스트 마이닝에 도입해 풀어보자.
+
+텍스트 마이닝의 문제 유형과 분석 방법
+
+- 군집: 이 문서의 주제는 무엇인가?
+- 상관관계: 단어와 단어 사이의 상관관계는 어떻게 되는가?
+- 연관관계: 주로 같이 나오는 단어들의 집합은 어떻게 되는가?
+- 인과관계: 이 단어가 나온 후에 얼마 후에 특정 단어가 나오는가? (시계열 개념)
+
+사전 작업
+
+- stopword(불용어)를 빼준다
+- 특수문자, 공란, 대소문자의 처리
+- 감성사전: 형태소 분석을 한 후 업무의 성격에 따라 단어에 대한 긍정이나 부정을 점수로 만들어
+
+<b>1) 주제별 군집 분석</b>
+
+<b>1-1) 준비작업: 파일을 읽어들여 DataframeSource에 넣고 Corpus라는 객체로 만들어서 DocumentTermMatrix나 TermDocumentMatrix 형태로 만들어 준다</b>
+
+[Introduction to KoNLP API](https://cran.r-project.org/web/packages/KoNLP/vignettes/KoNLP-API.html)  [최신자료](https://github.com/haven-jeon/KoNLP/blob/master/etcs/KoNLP-API.md)
+```{r}
+#install.packages("KoNLP", dependencies = TRUE, repos = c(CRAN="http://cran.nexr.com/"))
+library(KoNLP)
+useSejongDic()
+#install.packages("tm")
+library(tm)
+docs <- read.csv("data/sms_spam.csv", header = T, stringsAsFactors = F)
+docs
+corpus <- Corpus(DataframeSource(docs[,1:2]))
+inspect(corpus[1:3])
+```
+
+<b>1-2)정제작업: 공란을 없애거나 특수문자를 제거</b>
+```{r}
+corpus_clean <- tm_map(corpus, tolower) 
+corpus_clean <- tm_map(corpus_clean , removeNumbers)
+corpus_clean <- tm_map(corpus_clean , removeWords , stopwords())
+corpus_clean <- tm_map(corpus_clean , removePunctuation) 
+
+lapply(corpus,as.character)
+```
+
+<b>1-3) TermDocumentMatrix: 단어-문서 행렬로 만들기, 이때 Tf-Idf 방식으로 가중치 함수를 정해줌 (설정 안하면 default로 freqeuncy)</b>
+
+```{r}
+sms_dtm <- TermDocumentMatrix(corpus , control = list(weighting=weightTfIdf))
+inspect(sms_dtm)
+```
+
+TF*IDF값이 클 수록 해당 단어가 문서를 잘 설명</br>
+TF (Term Frequency):  빈번하게 자주 나타나는 정도. 해당 주제가 자주 등장하는 단어가 문서를 잘 설명하는 단어.</br>
+IDF (Inverse Document Frequency): 단어가 출현한 문서의 역수. 즉, 해당하는 단어가 다른 주제가 아닌 바로 그 특정 문서에서만 나타나는 정도를 나타는 정도</br>
+이때 TF는 문서의 길이에 비례하므로 이를 고려해 정규화
+
+```{r}
+sms_dtm3 <- TermDocumentMatrix(corpus)
+inspect(sms_dtm3)
+```
+
+<b>1-4) 행렬객체를 탐색하는 함수 구현</b>
+- findFreqTerms: freqeuncy가 최소 얼마 이상인 단어만 검색
+- findAssocs: 특정 단어와 상관계수가 얼마 이상인 단어들을 모두 검색
+
+```{r}
+findFreqTerms(TermDocumentMatrix(corpus) , lowfreq = 2)
+findAssocs(TermDocumentMatrix(corpus) , "user" , 0.5)
+```
+
+<b>1-5) 문서-단어 행렬을 통해 본격적으로 문서를 분류하기 위한 모델 만들기</b>
+```{r}
+sms_dtm2 <- DocumentTermMatrix(corpus , control = list(weighting = weightTfIdf))
+inspect(sms_dtm2)
+```
+
+<b>1-6) 뉴럴네트워크 적용</b>
+```{r}
+#install.packages("caret")
+#install.packages("rpart")
+#install.packages("nnet")
+library(caret) 
+library(rpart)
+library(nnet) 
+sms_dtm2_df <- cbind(as.data.frame(as.matrix(sms_dtm2)) , LABEL = docs$type)
+m <- nnet(LABEL ~ . , data = sms_dtm2_df , size = 3) #nnet함수에 넣어 모델링
+predict(m , newdata = sms_dtm2_df) 
+```
+
+3건의 데이터 모두 높은 확률로 3개의 주제로 분류함. 수치는 뉴럴네트웍의 특성상 실행때마다 조금씩 달라질 수 있음
+
+### 2) 생활 속의 문제 : 백화점 CIC분석
+백화점 고객 전화통화의 매일의 불만거리 내용을 단어별로 분석하여 텍스트마이팅을 하여 단어별 상관관계나 연관탐사를 하거나 특정단어의 시계열패턴 또는 단어끼리의 시계열 상관관계를 보고자 함.
+
+<b>2-1) 전처리</b>
+```{r}
+library(stringr) #for str_replace_all
+advice <- read.csv("data/advice.csv" , header = T , stringsAsFactors = F)
+advice[1,]
+place <- sapply(advice[,2] , extractNoun , USE.NAMES = F)  #명사로 쪼갬
+place
+c <- unlist(place) 
+place2 <- Filter(function(x) {nchar(x) >=2 & nchar(x) <= 5} , c) #2~5글자인 것만 filter
+res <- str_replace_all(place2 , "[^[:alpha:]]" , "") #특수문자와 제거
+res <- res[res != ""] #공란 제거
+res
+```
+
+<b>2-2) 정렬을 통해 자주 나오는 단어를 위주로 keyword 생성</b>
+```{r}
+wordcount <- table(res)
+wordcount2 <- sort(table(res) , decreasing=T)
+wordcount2 #교환건수와 포장에 불만이 가장 많음
+```
+
+<b>2-3) 워드클라우드를 그려보고 keyword 생성</b>
+
+```{r}
+#install.packages("wordcloud")
+#install.packages("RColorBrewer")
+library(wordcloud);
+library(RColorBrewer)
+palete <- brewer.pal(8 , "Set2") #palette의 색(>=3)을 8개로 선정
+#?wordcloud
+wordcloud(names(wordcount) , freq = wordcount , scale=c(3,1) , rot.per = 0.25 , min.freq = 1 , random.order = F , random.color = T , colors = palete) 
+keyword <- dimnames(wordcount2[1:10])$res
+keyword
+```
+
+<b>2-4) 날짜-단어 행렬 생성</b>
+
+```{r}
+contents <- c()
+for(i in 1:6) { 
+  inter <- intersect(place[[i]] , keyword)
+  contents <- rbind(contents ,table(inter)[keyword])
+}
+
+inter #"노트북" "TV" 
+contents
+
+rownames(contents) <- advice$DATE
+colnames(contents) <- keyword
+contents[which(is.na(contents))] <- 0 
+contents
+```
+
+### 3) 분석 확장
+위의 데이터셋을 늘려 오랜 기간 동안 keyword를 분석하여 행렬로 만들어 advice2.csv에 저장한 데이터로 분석을 수행한다.
+```{r}
+advice2 <- read.csv("data/advice2.csv" , header = T , stringsAsFactors = F)
+rownames(advice2) <- advice2[,1]
+advice2
+advice2 <- advice2[-1]
+advice2
+advice3 <- ifelse(advice2 > mean(apply(advice2, 2 , mean)) , 1 , 0) #frequency가 평균 이하인 keyword는 0으로 처리
+advice3
+```
+
+<b>3-1) 분석</b>
+지지도 0.3, 신뢰도 0.7로 aprioir 알고리즘을 적용해보자.
+```{r}
+library(arules) 
+trans <- as.matrix(advice3 , "Transaction")
+trans
+rules1 <- apriori(trans , parameter = list(supp=0.3 , conf = 0.7 , target = "rules"))
+rules1 
+inspect(sort(rules1)) #지지도와 신뢰도로 정렬
+```
+전반적으로 IT기기끼리 또는 해산물관련 음식끼리 연관관계가 있어 보임.
+
+```{r}
+rules2 <- subset(rules1 , subset = lhs %pin% '초밥' & confidence > 0.7)
+inspect(sort(rules2)) 
+```
+초밥은 연어나 고등어와 동조된 것이 관찰됨.
+
+<b>3-2) transaction plotting</b>
+transaction을 지지도와 신뢰도에 따라 plotting 한다.
+```{r}
+image(trans)
+#install.packages("arulesViz")
+library(arulesViz)
+image(trans)
+```
+
+<b>3-3-1) rule plotting</b>
+rule을 지지도와 신뢰도에 따라 plotting 한다.
+```{r}
+#install.packages("arulesViz")
+library(arulesViz)
+plot(rules1) 
+```
+
+<b>3-3-2) rule plotting: buble chart</b>
+buble chart에서 원의 크기는 지지도 색깔이 진할수록 lift가 커져서 신뢰도가 높다.
+```{r}
+plot(rules1 , method = "grouped") 
+```
+
+<b>3-3-2) rule plotting: Socatial network map</b>
+서로 연관성 있는 단어끼리 선분이 맺어진다. 원의 크기는 지지도를 의미하고 색깔은 lift(향상도)를 나타냄.
+```{r}
+plot(rules1 , method = "graph" , control = list(type = "items")) 
+```
+키워드끼리 군집을 형성하는 모습까지 관찰할 수 있음.
+
+<b>3-3-3) rule plotting: 평행좌표그래프</b>
+
+```{r}
+plot(rules1 , method = "paracoord" , control = list(reorder = TRUE)) 
+```
+{프린터,노트북,TV,핸드폰}의 집합끼리 상관관계가 강하고 {dusdj,chqkq,rhemddj} 집합내의 원소들끼리 상관관계가 강하다는 것을 유추가 가능.
+
+### 4) Correlation
+
+```{r}
+cor(advice2)
+```
+
+<b>4-1-1) correlation plot: corrgram</b>
+
+```{r}
+#install.packages("corrgram")
+library(corrgram)
+corrgram(cor(advice2))
+```
+
+<b>4-1-2) correlation plot: corrplot</b>
+
+```{r}
+#install.packages("corrplot")
+library(corrplot)
+corrplot(cor(advice2))
+```
+
+<b>4-1-3) correlation plot: social network map</b>
+
+```{r}
+library(sna)
+library(rgl)
+advice_square <- t(as.matrix(advice2)) %*% as.matrix(advice2)
+advice_square
+gplot(sqrt(sqrt(advice_square)) , displaylabel=T , vertex.cex=sqrt(diag(advice_square))*0.01 , label=rownames(advice_square) , edge.col="blue" , boxed.labels=F , arrowhead.cex=0.01 , edge.lwd=0.01 , vertex.alpha=0.01)
+```
+
+### 5. 시계열 패턴 분석
+```{r}
+library(zoo)
+dates <- as.Date(rownames(advice2)  , format = "%Y-%m-%d")
+time_keywords <- zoo(advice2 , dates) 
+time_keywords
+plot(time_keywords)
+```
+
+단어별로 주기적으로 어떤 패턴이 존재하는 것 같음. 각 단어 별로 arima 모델을 만들어 단어끼리 어떤 교차상관 관계가 존재하는지 검사해 볼 수 있음.
+
+```{r}
+ccf(advice2$고등어, advice2$연어, main = "고등어 vs 연어")
+```
+
+```{r}
+ccf(advice2$장롱, advice2$탁자, main = "장롱 vs 탁자")
+```
+
+전반적으로 고등어와 연어, 그리고 장롱과 탁자는 상관관계가 강한 편이며 크게 떨어지거나 올라가는 부분이 없다.
+
+```{r}
+ccf(advice2$TV, advice2$구두, main = "TV vs 구두")
+```
+TV와 구두는 전반적으로 음의 상관관계가 강함.
+
+```{r}
+ccf(advice2$곰팡이, advice2$노트북, main = "곰팡이 vs 노트북")
+```
+곰팡이와 노트북은 양의 상관과 음의 상관이 번갈아 나타나는 특이한 형태지만, 파란 점선 안에 있으므로 값이 워낙 작아 의미를 둘 수 없음.

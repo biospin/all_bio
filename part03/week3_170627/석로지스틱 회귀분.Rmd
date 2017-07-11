@@ -1,0 +1,40 @@
+---
+title: "로지스틱 회귀분석 "
+output: html_notebook
+---
+
+```{r}
+## 자료입력 및 관찰 
+getwd()
+setwd("C:/Users/GaYoung/Desktop/그림으로 이해하는 닥터 배의 술술 보건의학통계")
+
+birthdata = read.csv("9_logistic_regression.csv")
+attach(birthdata)
+birthdata[(1:20),]
+```
+
+```{r}
+## 로지스틱 회귀분석. 전부 입력
+resultall = glm(low ~ age + lwt + factor(race) + smoke + ptl + ht + ui + ftv, family = binomial)
+summary(resultall)
+exp(coef(resultall))
+exp(confint(resultall))
+```
+```{r}
+## 로지스틱 회구분석, 단계선택법
+resultstep = step(resultall, direction = "both")
+summary(resultall)
+exp(coef(resultall))
+exp(confint(resultall))
+```
+```{r}
+## 로지스틱 회귀분석, 최종모형
+resultfinal = glm(low ~ lwt + factor(race) + smoke +ht + ui, family = binomial)
+summary(resultfinal)
+exp(coef(resultfinal))
+exp(confint(resultfinal))
+
+detach(birthdata)
+```
+
+

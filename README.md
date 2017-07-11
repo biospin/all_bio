@@ -97,7 +97,8 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |    |          |(통계와데이터마이닝)  머신러닝 - 9장  ~ 10장 : Text Mining
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 5장 오차역전파법
 |  3 |2017. 6.27|(바이오인포)  고급바이오정보학 - 9강. Gene Discover II: Multiple Testing with FDR Control 
-|    |          |(통계와데이터마이닝) 보건의학통계 - 9장 질병의 위험인자에 대한 연구 
+|    |          |(통계와데이터마이닝) [보건의학통계 - 9장 질병의 위험인자에 대한 연구 ](https://github.com/biospin/all_bio/blob/master/part03/week3_170627/09%20%EC%A7%88%EB%B3%91%EC%9D%98%20%EC%9C%84%ED%97%98%EC%9D%B8%EC%9E%90%EC%97%90%20%EB%8C%80%ED%95%9C%20%EC%97%B0%EA%B5%AC.pdf)(라가영)
+|    |          | [실습코드](https://github.com/biospin/all_bio/blob/master/part03/week3_170627/%EC%84%9D%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1%20%ED%9A%8C%EA%B7%80%EB%B6%84.Rmd)
 |    |          |(딥러닝)  모두의 딥러닝 - ML 11 ~  ML 12
 |  4 |2017. 7. 4|(바이오인포)  고급바이오정보학 - 10강. Prediction and Validation
 |    |          |(통계와데이터마이닝)  머신러닝 - 11장 ~ 12장 : Logistic Regression

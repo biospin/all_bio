@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+options(warn = FALSE)
+Sys.getlocale()
+Sys.setlocale('LC_ALL', 'C')
+
+drink <- read.csv("./drink.csv" , header = T, encoding = 'CP949')
+drink
+
+str(drink)
+attach(drink)
+library(class)
+m <- glm(Late ~ Age + Married + Children + Health + Drink + Position + Sex , family = binomial(link = logit) , data = drink)
+m
+
+```
+
+```{r}
+
+predict(m , drink , type = "response")
+
+predict(m , drink , type = "response") >= 0.5
+drink$Late
+
+table(drink$Late , predict(m , drink , type = "response") > 0.5)
+summary(m) 
+
+```
+
+```{r}
+#諛쒕젋???씤 ?꽑臾? 
+ball <- read.csv("./ball.csv" , header = T, encoding = 'UTF8') 
+print (ball)
+str(ball) 
+
+```
+
+```{r}
+
+library(nnet) 
+m2 <- multinom(Gift ~ . , data = ball) 
+m2
+
+```
+
+```{r}
+cbind(fitted(m2) , levels(ball$Gift)[ball$Gift])
+
+predicted <- levels(ball$Gift)[apply(fitted(m2) , 1 , which.max)]
+predicted
+sum(predicted != ball$Gift)
+
+xtabs(~ predicted + ball$Gift)
+```
+

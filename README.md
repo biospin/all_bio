@@ -101,7 +101,8 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |    |          | [실습코드](https://github.com/biospin/all_bio/blob/master/part03/week3_170627/%EC%84%9D%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1%20%ED%9A%8C%EA%B7%80%EB%B6%84.Rmd)
 |    |          |(딥러닝)  모두의 딥러닝 - ML 11 ~  ML 12
 |  4 |2017. 7. 4|(바이오인포)  고급바이오정보학 - 10강. Prediction and Validation
-|    |          |(통계와데이터마이닝)  머신러닝 - 11장 ~ 12장 : Logistic Regression
+|    |          |(통계와데이터마이닝)  [머신러닝 - 11장 : Social Network Analysis ](https://github.com/biospin/all_bio/blob/master/part04/week1_170711/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D11_12%EC%9E%A5/All_Bio_Codes11_copy_fin.pdf)(손준영)
+|    |          |(통계와데이터마이닝)  [머신러닝 - 12장 : Logistic Regression](https://github.com/biospin/all_bio/blob/master/part04/week1_170711/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D11_12%EC%9E%A5/All_Bio_Codes12_LogisticRegression.pdf)
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 6장 학습 관련 기술들
 
 
@@ -109,14 +110,15 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |seq.|    날짜        |     내용                                                                                      
 |----| ---------|----------------------------------------------
 |  1 |2017. 7.11|(바이오인포)  고급바이오정보학 - 11강. Application of Prediction Models: Clinical Trials for Biomarker-Driven Treatment Strategies 
-|    |          |(통계와데이터마이닝)  보건의학통계 - 10장 동일 개체에서 반복적으로 측정된 자료를 분석하는 방법
-|    |          |(딥러닝)  모두의 딥러닝 -  ML 13
-|  2 |2017. 7.18|(바이오인포) 고급바이오정보학 -12강. Structural Genomic Variation 1 
-|    |          |(통계와데이터마이닝)  머신러닝 - 13장 ~ 14장 : Support Vector Machine
-|    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 7장 합성곱 신경망(CNN)
+|    |          |(통계와데이터마이닝)  [보건의학통계 - 10장 동일 개체에서 반복적으로 측정된 자료를 분석하는 방법](https://github.com/biospin/all_bio/blob/master/part04/week1_170711/RepeatedMeasureANOVA(SPSS).pdf)
+|    |          |(딥러닝)  [모두의 딥러닝 -  ML 13](https://github.com/biospin/all_bio/blob/master/part04/week1_170711/%EB%AA%A8%EB%91%90%EC%9D%98%20%EB%94%A5%EB%9F%AC%EB%8B%9D%2013%EA%B0%95.AWS/lab13.pdf)
+|  2 |2017. 7.18|(바이오인포) [고급바이오정보학 -12강. Structural Genomic Variation 1 ](https://github.com/biospin/all_bio/blob/master/part04/week2_170718/%EA%B3%A0%EA%B8%89%EB%B0%94%EC%9D%B4%EC%98%A4%EC%A0%95%EB%B3%B4%ED%95%99%20-12%EA%B0%95.pdf)
+|    |          |(통계와데이터마이닝)  [머신러닝 - 13장 : Rule Based Classification ](https://github.com/biospin/all_bio/blob/master/part04/week2_170718/(%EB%B0%95%EC%A7%80%ED%98%9C)R_%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_RuleBased/(%EB%B0%95%EC%A7%80%ED%98%9C)13.pdf)
+|    |          |(통계와데이터마이닝)  [머신러닝 - 14장 : Support Vector Machine](https://github.com/biospin/all_bio/blob/master/part04/week2_170718/(%EB%B0%95%EC%A7%80%ED%98%9C)R_%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_SVM/(%EB%B0%95%EC%A7%80%ED%98%9C)14.pdf)
+|    |          |(딥러닝)  [밑바닥부터 시작하는 딥러닝 - 7장 합성곱 신경망(CNN)](https://github.com/biospin/all_bio/blob/master/part04/week2_170718/TF_CNN.pdf)
 |  3 |2017. 7.25|(바이오인포)  고급바이오정보학 - 13강. Structural Genomic Variation 2 
 |    |          |(통계와데이터마이닝) 보건의학통계 - 11장 생존율에 영향을 미치는 위험인자에 대한 연구
-|    |          |(딥러닝)  모두의 딥러닝 -  ML 14
+|    |          |(딥러닝)  [모두의 딥러닝 -  ML 14](https://github.com/biospin/all_bio/blob/master/part04/week3_170725/Google%20Cloud%20ML.pdf)
 |  4 |2017. 8. 1|(바이오인포)  고급바이오정보학 -  14강. Matrix Visualization for Biomedical Data
 |    |          |(통계와데이터마이닝)  머신러닝 - 15장 ~ 16 장 : Genetic Algorithm
 |    |          |(딥러닝)  밑바닥부터 시작하는 딥러닝 - 8장 딥러닝

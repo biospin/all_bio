@@ -1,0 +1,89 @@
+
+
+
+
+gcloud beta ml init-project
+
+# https://cloud.google.com/sdk/docs/quickstart-windows
+
+gcloud config list project --format  "value(core.project)" 
+
+SET PROJECT_ID=tensorflow-test-174705
+
+SET BUCKET_NAME=%PROJECT_ID%-ml
+echo %BUCKET_NAME%
+
+# 신용카드 등록 필요함.
+gsutil mb -l us-central1 gs://%BUCKET_NAME%
+
+
+git clone https://github.com/hunkim/GoogleCloudMLExamples.git
+
+## https://www.tensorflow.org/install/install_windows 에서 윈도우즈용 설치함.
+## 첫번째 예제
+python -m train.1-multiply
+
+# 함수 수정 
+def run_training():
+    x = tf.placeholder("float") # Create a placeholder 'x'
+    w = tf.Variable(5.0, name="weights")
+    y = w  * x   # &lt;== 
+
+    with tf.Session() as sess:
+        # Add the variable initializer Op.
+        tf.global_variables_initializer().run()  # &lt;== 
+
+        print(sess.run(y, feed_dict={x: 1.0}))
+        print(sess.run(y, feed_dict={x: 2.0}))
+
+
+		
+SET JOB_NAME=task8
+echo %JOB_NAME%
+
+SET STAGING_BUCKET=%PROJECT_ID%-ml
+echo %STAGING_BUCKET%
+
+ 
+# https://cloud.google.com/sdk/gcloud/reference/ml-engine/jobs/submit/training
+# 변경됨.
+# ERROR: (gcloud.ml-engine.jobs.submit.training) The required property [region] is not currently set.
+# ERROR: (gcloud.ml-engine.jobs.submit.training) FAILED_PRECONDITION: Field: parent Error: Please make sure that Google Cloud Machine Learning API is enabled for the project.
+gcloud ml-engine jobs submit  training %JOB_NAME% --region=us-central1  --package-path=train --staging-bucket=gs://%STAGING_BUCKET% --module-name=train.1-multiply
+
+
+## 두번째 예제
+# 공백 주의
+python -m train.2-input
+
+SET JOB_NAME=task9
+
+SET PROJECT_ID=tensorflow-test-174705
+SET STAGING_BUCKET=gs://%PROJECT_ID%-ml
+SET INPUT_PATH=%STAGING_BUCKET%/input
+echo %INPUT_PATH%
+
+gsutil cp input/input.csv  %INPUT_PATH%/input.csv
+
+gcloud ml-engine jobs submit  training %JOB_NAME% --region=us-central1  --package-path=train --staging-bucket=%STAGING_BUCKET%  --module-name=train.2-input -- --input_dir=%INPUT_PATH%
+
+
+## 세번째 예제
+python -m train.3-output
+
+
+SET JOB_NAME=task11
+
+gcloud config list project --format  "value(core.project)" 
+SET PROJECT_ID=tensorflow-test-174705
+SET STAGING_BUCKET=gs://%PROJECT_ID%-ml
+SET OUTPUT_PATH=%STAGING_BUCKET%/output/
+echo %OUTPUT_PATH%
+
+#gsutil cp /dev/null  %OUTPUT_PATH%  
+# 윈도우즈에서 위의 명령어가 안 먹힘..  그냥 수동으로 만들어줌.
+
+
+gcloud ml-engine jobs submit  training %JOB_NAME% --region=us-central1  --package-path=train --staging-bucket=%STAGING_BUCKET%  --module-name=train.3-output -- --output_dir=%OUTPUT_PATH%
+
+ 

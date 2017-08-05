@@ -125,6 +125,7 @@ https://drive.google.com/drive/u/0/folders/0B6bSLTlVnagfVHRXLWxkZTRLNDg
 |  5 |2017. 8. 8|(통계와데이터마이닝) 보건의학통계 - 12장 질병의 발생률에 대한 연구  
 |    |          |(통계와데이터마이닝) 보건의학통계 - 13장 두 치료법의 동등성, 비열등성을 검정하는 방법
 |    |          |(통계와데이터마이닝) 머신러닝 - 17장 ~ 18 장 : Model Evaluation 
+|    |          |(논문읽기모임) [PR-001: Generative adversarial nets by Jaejun Yoo](https://github.com/biospin/all_bio/blob/master/part04/week4_170801/GAN.pdf)
 
 * "어서와~ 머신러닝은 처음이지?"책  19장이후는 다음 스터디에서 연결해서 진행하겠습니다.
 
